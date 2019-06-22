@@ -1,0 +1,23 @@
+ipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+		git checkout 'https://github.com/paulkitchener/hello.git'
+		sh './javac HelloWorld.java'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
