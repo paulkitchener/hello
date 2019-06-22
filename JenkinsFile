@@ -5,8 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		#git 'https://github.com/paulkitchener/hello.git'
-		#sh './javac HelloWorld.java'
+		/*git 'https://github.com/paulkitchener/hello.git'
+		sh './javac HelloWorld.java'
+		*/
             }
         }
         stage('Test') {
