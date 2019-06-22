@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		git 'https://github.com/paulkitchener/hello.git' -b pk
+		git branch 'pk', url 'https://github.com/paulkitchener/hello.git'
 		sh 'javac HelloWorld.java'
             }
         }
